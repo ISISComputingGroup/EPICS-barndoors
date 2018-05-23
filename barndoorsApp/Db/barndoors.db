@@ -25,7 +25,7 @@ record(motor,"$(P)$(INST)BARNDOORS")
     field(URIP,"Yes") 
     field(STOO,"$(P)$(MTR).STOP  PP MS") 
     field(DINP,"$(P)$(MTR).DMOV  NPP MS") 
-    field(MRES,"0.001") 
+    field(MRES,"1") 
     field(RRES,"1.000") 
     field(PREC,"3") 
     field(DHLM,"$(HIGH_GAP_LIMIT)") 
@@ -52,7 +52,7 @@ record(cvt, "$(P)$(INST)convertGapToDrive")
 
     field(DESC,"Convert gap distance to drive voltage") 
  	
-    field(OUT,"$(P)$(MTR).DVAL  PP MS")
+    field(OUT,"$(P)$(MTR)  PP MS")
 }
 
 record(cvt,"$(P)$(INST)convertDriveToGap") 
@@ -65,4 +65,5 @@ record(cvt,"$(P)$(INST)convertDriveToGap")
  
     field(DESC,"Convert drive voltage to gap distance") 
     field(INPX,"$(P)$(MTR).DRBV  CP MS") 
+    field(OUT,"$(P)$(INST)BARNDOORS  PP MS")
 }
