@@ -37,12 +37,12 @@ record(calcout, "$(P)MFRMGAP")
 { 
 	field(DESC,"Convert gap distance to drive voltage") 
     field(CALC,"A / 2.0") 	
-    field(OUT,"$(P)$(MTR).DVAL  PP MS")
+    field(OUT,"$(P)$(MTR).VAL  PP MS")
 }
 
 record(calcout,"$(P)MTOGAP") 
 {
     field(DESC,"Convert drive voltage to gap distance")
-    field(INPA,"$(P)$(MTR).DRBV  CP MS")
+    field(INPA,"$(P)$(MTR).RBV  CP MS")
     field(CALC,"A * 2.0") 
 }
