@@ -31,7 +31,10 @@ record(motor,"$(P)MSLITS")
 
 alias("$(P)MSLITS", "$(P)MSLITS:SP")
 alias("$(P)MSLITS", "$(P)MSLITS:SP:RBV")
-
+alias("$(P)$(MTR)_IOCNAME", "$(P)MSLITS_IOCNAME")
+alias("$(P)$(MTR)_able", "$(P)MSLITS_able")
+alias("$(P)$(MTR)_HOMED", "$(P)MSLITS_HOMED")
+alias("$(P)$(MTR):_MSTABITS", "$(P)MSLITS:_MSTABITS")
 
 record(calcout, "$(P)MFRMGAP") 
 { 
